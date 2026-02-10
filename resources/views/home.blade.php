@@ -9,7 +9,8 @@
     <form action="/print/" method="post">
         @csrf
         <label for="letters">letters</label>
-        <input type="text" id="letters" name="letters">
+        <input type="text" id="letters" name="letters" pattern="[A-Ga-g ]+"
+            title="Only letters from A to G are allowed" required>
         <input type="submit" value="Submit">
     </form>
 </body>
