@@ -6,4 +6,4 @@ use App\Http\Controllers\ConvertController;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/print', [ConvertController::class, 'printMe']);
+Route::post('/print', [ConvertController::class, 'assemble']);

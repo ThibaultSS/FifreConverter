@@ -6,7 +6,7 @@
   <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-    <form action="/print" method="get">
+    <form action="/print/" method="post">
         @csrf
         <label for="letters">letters</label>
         <input type="text" id="letters" name="letters">
