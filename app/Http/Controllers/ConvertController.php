@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 class ConvertController extends Controller
 {
     public function assemble(Request $request) {
-        $arrayLetters = $this->makeArray(strtoupper($request->letters));
-        $arrayConvertedHorizontal = $this->convertArray($arrayLetters);
-        return $this->printVertical($arrayConvertedHorizontal);
+        $arrayLetters = $request->input('letters');
+        return $arrayLetters;
+        //$arrayConvertedHorizontal = $this->convertArray($arrayLetters);
+        //return $this->printVertical($arrayConvertedHorizontal);
     }
     private function makeArray($letters) {
         $array = [];
@@ -29,7 +30,7 @@ class ConvertController extends Controller
             'G' => '0XXXXX',
             ' ' => '      '
         ];
-        return $fifre[$letter];
+        return $fifre[strtoupper($letter)];
     }
     private function convertArray($array) {
         $convertedArray = [];
