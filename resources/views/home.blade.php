@@ -6,7 +6,7 @@
   <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-    <form action="/print/" method="post" id="letterForm">
+    <form action="/pdf/" method="post" id="letterForm">
         @csrf
         <label for="letters">letters</label>
         <input type="text" name="letters[]" pattern="[A-Ga-g ]+"

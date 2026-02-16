@@ -7,3 +7,4 @@ Route::get('/', function () {
     return view('home');
 });
 Route::post('/print', [ConvertController::class, 'assemble']);
+Route::post('/pdf', [ConvertController::class, 'downloadPdf']);
